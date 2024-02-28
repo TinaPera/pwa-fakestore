@@ -26,7 +26,7 @@ const menuAberto = ref(false);
       <div class="header--icons">
         <Account />
         <CartPlus />
-        <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
+        <Menu class="menu-hamburger" @click="menuAberto = !menuAberto"/>
       </div>
     </header>
   </template>
