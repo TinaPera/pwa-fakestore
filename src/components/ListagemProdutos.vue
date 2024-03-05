@@ -1,7 +1,10 @@
 <script setup>
+import { useScreen } from '@/composables/screen';
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 const produtos = ref([]);
+const { browserWidth, deviceWidth, isMobile } = useScreen();
+
 
 onMounted(async () => {
   const response = await axios.get('https://fakestoreapi.com/products');
@@ -9,6 +12,8 @@ onMounted(async () => {
 });
 
 const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
+
+
 </script>
 
 <template>
